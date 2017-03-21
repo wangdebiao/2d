@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="public/public.css">
+	<script src="public/jquery.min.js"></script>
+</head>
+<style>
+	.box{
+		width:200px;
+		height:200px;
+		border:5px solid #0B0003;
+		position: fixed;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+		margin:auto;
+		box-shadow: 0 0 5px #000;
+		border-radius: 50%;
+		background: radial-gradient(#EBEEF5,#EBEEF7);
+	}
+	.xiao{
+		width:2px;
+		height:6px;
+		background: #93969F;
+		position: absolute;
+		top:2px;
+		left:99px;
+	}
+	.da{
+		width:6px;
+		height:6px;
+		border-radius: 50%;
+		background: #060203;
+		position: absolute;
+		top:2px;
+		left:97px;
+	}
+	.zi{
+		display: inline-block;
+		width:10px;
+		height:10px;
+		text-align: center;
+		line-height: 10px;
+	}
+	.zibox{
+		display: inline-block;
+		width:10px;
+		height:10px;
+		position: absolute;
+		top:15px;
+		left:95px;
+	}
+</style>
+<body>
+	<div class="box">
+		
+	</div>
+</body>
+<script>
+
+function draw () {
+	// 绘制刻度
+		for (var i = 0; i < 60; i++) {
+			var div=$("<div>");
+			if(i%5==0){div.addClass("da");}else{div.addClass("xiao");}
+			div.css({"transformOrigin":"center 98px","transform":"rotate("+i*6+"deg)"}).appendTo($(".box"));
+		};
+	//数字
+		for (var i = 0; i < 12; i++) {
+			
+			var spans=$("<span>").addClass("zibox").css({"transformOrigin":"center 85px","transform":"rotate("+i*30+"deg)"});
+			var num=i;
+			if(i==0){
+				num=12;
+			}
+			$("<p>").html(num).addClass("zi").css({"transform":"rotate("+-i*30+"deg)"}).appendTo(spans);
+			spans.appendTo($(".box"))
+		};
+	// 获取当前时间
+		var times=new Date;
+		var h=times.getHours();
+		var m=times.getMinutes();
+		var s=times.getSeconds();
+	// 绘制时分秒指针
+		var H=zhizheng(6,50,"#000",h*30+m*6/12);
+		var M=zhizheng(4,60,"#000",m*6);
+		var S=zhizheng(2,70,"red",s*6);
+	//让时间走起来
+		setInterval(function(){
+			var times=new Date;
+			var h=times.getHours();
+			var m=times.getMinutes();
+			var s=times.getSeconds();
+			H.css({"transformOrigin":"center bottom","transform":"rotate("+(h*30+m*6/12)+"deg)"});
+			M.css({"transformOrigin":"center bottom","transform":"rotate("+m*6+"deg)"});
+			S.css({"transformOrigin":"center bottom","transform":"rotate("+s*6+"deg)"});
+		},1000)
+	// 绘制指针封装函数
+		function zhizheng(width,height,color,rotate){
+			var lefts=(200-width)/2;
+			var tops=200/2-height;
+			var bb=$("<b>").css({"display":"inline-block","width":width,"height":height,"background":color,"position":"absolute","top":tops,"left":lefts,"transformOrigin":"center bottom","transform":"rotate("+rotate+"deg)","borderRadius":"50%"}).appendTo($(".box"));
+			return bb;
+		}
+}
+draw ()
+
+</script>
+</html>

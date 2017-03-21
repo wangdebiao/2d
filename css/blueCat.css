@@ -1,0 +1,349 @@
+body {
+  background: #eee;
+}
+* {
+  box-sizing: border-box;
+}
+.box {
+  width: 388px;
+  height: 478px;
+  float: left;
+  background: #FEED7B;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.tou {
+  width: 315px;
+  height: 304px;
+  border-radius: 50%;
+  background: #0cb0d9;
+  position: absolute;
+  border: 2px solid #080100;
+  left: 36.5px;
+  top: 0;
+}
+.left-yan {
+  width: 70px;
+  height: 80px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  border: 2px solid #080100;
+  left: 87.5px;
+  top: 40px;
+  z-index: 50;
+}
+.right-yan {
+  width: 70px;
+  height: 80px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  border: 2px solid #080100;
+  left: 157.5px;
+  top: 40px;
+  z-index: 50;
+}
+.left-yan-yanzhu {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #000;
+  position: absolute;
+  border: 2px solid #080100;
+  left: 46px;
+  top: 52px;
+}
+.right-yan-yanzhu {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #000;
+  position: absolute;
+  border: 2px solid #080100;
+  right: 46px;
+  top: 52px;
+}
+.bizi {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #c93e00;
+  position: absolute;
+  border: 2px solid #080100;
+  top: 108px;
+  left: 140.5px;
+  z-index: 99;
+}
+.lian {
+  width: 265px;
+  height: 200px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  border: 2px solid #080100;
+  top: 80px;
+  left: 25px;
+  z-index: 1;
+}
+.left-lian {
+  width: 115px;
+  height: 110px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  border: 2px solid #080100;
+  bottom: 44px;
+  left: 17.5px;
+  border-left: none;
+  border-top: none;
+}
+.left-huxu-1 {
+  width: 60px;
+  height: 4px;
+  border-radius: 50%;
+  background: #929292;
+  position: absolute;
+  border: 2px solid #080100;
+  bottom: 50px;
+  left: 24px;
+  border: #929292;
+}
+.left-huxu-2 {
+  width: 60px;
+  height: 4px;
+  border-radius: 50%;
+  background: #929292;
+  position: absolute;
+  border: 2px solid #080100;
+  bottom: 66px;
+  left: 24px;
+  border: #929292;
+}
+.left-huxu-3 {
+  width: 60px;
+  height: 4px;
+  border-radius: 50%;
+  background: #929292;
+  position: absolute;
+  border: 2px solid #080100;
+  bottom: 82px;
+  left: 24px;
+  border: #929292;
+}
+.right-lian {
+  width: 115px;
+  height: 110px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  border: 2px solid #080100;
+  bottom: 44px;
+  right: 17.5px;
+  border-right: none;
+  border-top: none;
+}
+.right-huxu-1 {
+  width: 60px;
+  height: 4px;
+  border-radius: 50%;
+  background: #929292;
+  position: absolute;
+  border: 2px solid #080100;
+  bottom: 50px;
+  right: 24px;
+  border: #929292;
+}
+.right-huxu-2 {
+  width: 60px;
+  height: 4px;
+  border-radius: 50%;
+  background: #929292;
+  position: absolute;
+  border: 2px solid #080100;
+  bottom: 66px;
+  right: 24px;
+  border: #929292;
+}
+.right-huxu-3 {
+  width: 60px;
+  height: 4px;
+  border-radius: 50%;
+  background: #929292;
+  position: absolute;
+  border: 2px solid #080100;
+  bottom: 82px;
+  right: 24px;
+  border: #929292;
+}
+.lianzi {
+  width: 228px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ca4100;
+  position: absolute;
+  border: 2px solid #080100;
+  bottom: 13px;
+  left: 43.5px;
+  z-index: 99;
+  border-radius: 5px;
+}
+.left-shou {
+  width: 61px;
+  height: 61px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  border: 2px solid #080100;
+  bottom: 93px;
+  left: 0;
+  z-index: 99;
+}
+.right-shou {
+  width: 61px;
+  height: 61px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  border: 2px solid #080100;
+  bottom: 93px;
+  right: 0;
+  z-index: 99;
+}
+.left-gebo {
+  width: 100px;
+  height: 50px;
+  border-radius: 50%;
+  background: #0cb0d9;
+  position: absolute;
+  border: 2px solid #080100;
+  left: 30px;
+  bottom: 122px;
+  transform: rotate(145deg);
+  z-index: 5;
+}
+.right-gebo {
+  width: 100px;
+  height: 50px;
+  border-radius: 50%;
+  background: #0cb0d9;
+  position: absolute;
+  border: 2px solid #080100;
+  right: 30px;
+  bottom: 122px;
+  transform: rotate(-145deg);
+  z-index: 5;
+}
+.left-jiao {
+  width: 124px;
+  height: 30px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  border: 2px solid #080100;
+  bottom: 0;
+  left: 70px;
+  z-index: 99;
+  border-radius: 5px;
+}
+.right-jiao {
+  width: 124px;
+  height: 30px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  border: 2px solid #080100;
+  bottom: 0;
+  right: 70px;
+  z-index: 99;
+  border-radius: 5px;
+}
+.shengti {
+  width: 220px;
+  height: 160px;
+  border-radius: 50%;
+  background: #0cb0d9;
+  position: absolute;
+  border: 2px solid #080100;
+  left: 84px;
+  bottom: 28px;
+  border-radius: 5px;
+  border-radius: 50px 50px 5px 5px;
+}
+.dan {
+  width: 25px;
+  height: 15px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  border: 2px solid #080100;
+  bottom: 28px;
+  left: 181.5px;
+}
+.duzi {
+  width: 170px;
+  height: 135px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  border: 2px solid #080100;
+  bottom: 60px;
+  left: 109px;
+}
+.koudai {
+  width: 130px;
+  height: 68px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  border: 2px solid #080100;
+  bottom: 15px;
+  left: 20px;
+}
+.lingdan {
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  background: #f9f02a;
+  position: absolute;
+  border: 2px solid #080100;
+  bottom: 160px;
+  left: 172.5px;
+  z-index: 99;
+  overflow: hidden;
+}
+.daodao {
+  width: 80px;
+  height: 7px;
+  border-radius: 50%;
+  background: #938e2e;
+  position: absolute;
+  border: 2px solid #080100;
+  top: 8px;
+  left: -10px;
+  border: #938e2e;
+}
+.diandian {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #000;
+  position: absolute;
+  border: 2px solid #080100;
+  top: 20px;
+  left: 15.5px;
+}
+.shu {
+  width: 2px;
+  height: 10px;
+  border-radius: 50%;
+  background: #000;
+  position: absolute;
+  border: 2px solid #080100;
+  bottom: 0;
+  left: 19px;
+}

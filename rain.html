@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="public/public.css">
+    <script src="public/jquery.min.js"></script>
+    <title>rain</title>
+</head>
+<style>
+    html,body{
+        width:100%;
+        height:100%;
+        background: #000000;
+        overflow: hidden;
+        position: relative;
+    }
+    div{
+        width:2px;
+        height:8px;
+        background: #fff;
+        border-radius: 50%;
+        position: absolute;
+        background: url("public/111.jpg") center;
+        transform: rotate(25deg);
+
+    }
+</style>
+<body>
+</body>
+<script>
+    var w=$(window).width();
+    var h=$(window).height();
+    var arr=[];
+    for(var i=0;i<100;i++){
+        var div=$("<div>").css({"transition":"transform 2s Linear "+Math.random()*3+"s","top":-100,"left":Math.random()*(w-20)+10});
+        arr.push(div);
+        div.appendTo($("html,body"));
+        var speed=0;
+        var t1=setInterval(move1,60);
+        function move1() {
+            speed+=1;
+            $("html,body").css({"transition":"transform 5s Linear","transform":"rotate("+Math.sin(Math.PI/180*speed)*30+"deg)"})
+        }
+        var t2=setTimeout(move2,0);
+        function move2(){
+            for(let i=0;i<arr.length;i++){
+                arr[i].css({"transform":"translate(0,"+(h+200)+"px)"});
+                arr[i].bind("webkitTransitionEnd",function(){
+                    var that=$(this);
+                    $(this).css({"transition":"none","transform":"translate(0,0)"})
+                    setTimeout(function(){
+                        that.css({"transition":"transform 2s Linear "+Math.random()*3+"s","transform":"translate(0,"+(h+200)+"px)"})
+                    },0)
+                })
+            }
+        }
+    }
+    $(window).blur(function(){
+        clearInterval(t1);
+        clearTimeout(t2);
+    })
+    $(window).focus(function(){
+        t1=setInterval(move1,60);
+        t2=setTimeout(move2,0);
+    })
+</script>
+</html>
