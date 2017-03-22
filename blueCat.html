@@ -11,10 +11,10 @@
 <div class="box">
     <div class="tou">
         <div class="left-yan">
-            <div class="left-yan-yanzhu"></div>
+            <div class="yanzhu left-yan-yanzhu"></div>
         </div>
         <div class="right-yan">
-            <div class="right-yan-yanzhu"></div>
+            <div class="yanzhu right-yan-yanzhu"></div>
         </div>
         <div class="bizi"></div>
         <div class="lian">
@@ -49,4 +49,35 @@
     </div>
 </div>
 </body>
+<script>
+    $(".box").bind("mouseenter mouseleave",
+        function(e) {
+            var w = $(this).width();
+            var h = $(this).height();
+            var x = (e.pageX - this.offsetLeft - (w / 2)) * (w > h ? (h / w) : 1);
+            var y = (e.pageY - this.offsetTop - (h / 2)) * (h > w ? (w / h) : 1);
+            var direction = Math.round((((Math.atan2(y, x) * (180 / Math.PI)) + 180) / 90) + 3) % 4;
+            // var eventType = e.type;
+            // var dirName = new Array('上方','右侧','下方','左侧');
+            // if(e.type == 'mouseenter'){
+            // 	$(this).html(dirName[direction]+'进入');
+            // }else{
+            // 	$(this).html(dirName[direction]+'离开');
+            // }
+            switch (direction) {
+                case 0:
+                    $(".yanzhu").css({"left":30,"top":0});
+                    break;
+                case 1:
+                    $(".yanzhu").css({"left":57,"top":30});
+                    break;
+                case 2:
+                    $(".yanzhu").css({"left":30,"top":65});
+                    break;
+                case 3:
+                    $(".yanzhu").css({"left":0,"top":30});
+                    break;
+            }
+        });
+</script>
 </html>

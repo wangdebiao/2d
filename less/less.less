@@ -1,0 +1,51 @@
+.o(@width,@height,@color:#00A0E8){
+  width:@width;
+  height:@height;
+  border-radius: 50%;
+  background: @color;
+  position: absolute;
+}
+body{
+  padding-left: 30px;
+}
+*{
+  box-sizing:border-box;
+}
+header,footer{
+  width:718px;
+  height:417px;
+  border:1px solid #BCAF5D;
+  float: left;
+  margin-top: 50px;
+  background: #FEED7B;
+  margin-left: 10px;
+  position: relative;
+
+}
+.weiba{
+  border:3px solid #230300;
+  top:140px;
+  left:140px;
+  .o(49px,49px,#E1002A);
+}
+.jiao{
+  transform:rotate(120deg) skew(7deg,8deg) ;
+  border:3px solid #080100;
+  left:95px;
+  bottom:45px;
+  .o(110px,110px,#fff);
+}
+.pigu{
+  .o(185px,185px,#00A0E8);
+  border-top:3px solid #080100;
+  border-left:3px solid #080100;
+  top:180px;
+  left:140px;
+}
+.tui{
+  .o(160px,120px,#00a0e9);
+  bottom:37px;
+  left:82px;
+  border-left:3px solid #080100;
+  transform:rotate(-10deg) skew(10deg,0deg);
+}
